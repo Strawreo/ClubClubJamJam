@@ -1,3 +1,104 @@
 [gd_scene format=3 uid="uid://bwt4e01n7pk5i"]
 
+[ext_resource type="Script" uid="uid://cf0twuq7d075p" path="res://Scripts/control.gd" id="1_r150o"]
+
 [node name="Main" type="Node2D" unique_id=2073079257]
+
+[node name="Control" type="Control" parent="." unique_id=1174248470]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("1_r150o")
+
+[node name="Minigames" type="HBoxContainer" parent="Control" unique_id=1801134013]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Minigames" unique_id=101490736]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="VelocityMinigame" type="Button" parent="Control/Minigames/VBoxContainer" unique_id=606944242 groups=["Button"]]
+layout_mode = 2
+text = "Minigame1"
+
+[node name="IntegrityMinigame" type="Button" parent="Control/Minigames/VBoxContainer" unique_id=1625540172 groups=["Button"]]
+layout_mode = 2
+text = "Minigame2"
+
+[node name="ReactionMinigame" type="Button" parent="Control/Minigames/VBoxContainer" unique_id=2085551704 groups=["Button"]]
+layout_mode = 2
+text = "Minigame2"
+
+[node name="Attributes" type="HBoxContainer" parent="Control" unique_id=594343493]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Attributes" unique_id=626984562]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Integrity" type="Label" parent="Control/Attributes/VBoxContainer" unique_id=64225268]
+layout_mode = 2
+text = "Integrity"
+
+[node name="Reaction" type="Label" parent="Control/Attributes/VBoxContainer" unique_id=1036018255]
+layout_mode = 2
+text = "Reaction"
+
+[node name="Velocity" type="Label" parent="Control/Attributes/VBoxContainer" unique_id=1062364374]
+layout_mode = 2
+text = "Velocity"
+
+[node name="Store" type="HBoxContainer" parent="Control" unique_id=2141384522]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.5
+offset_top = -15.5
+offset_right = 25.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="StoreButton" type="Button" parent="Control/Store" unique_id=1460714293 groups=["Button"]]
+layout_mode = 2
+text = "Store"
+
+[node name="Play" type="HBoxContainer" parent="Control" unique_id=1368595764]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.5
+offset_top = -40.0
+offset_right = 20.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PlayButton" type="Button" parent="Control/Play" unique_id=448300641 groups=["Button"]]
+layout_mode = 2
+text = "Play
+"

@@ -14,6 +14,16 @@ config/name="Club Club Jam Jam"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/stretch/mode="viewport"
+
+[dotnet]
+
+project/assembly_name="Club Club Jam Jam"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
