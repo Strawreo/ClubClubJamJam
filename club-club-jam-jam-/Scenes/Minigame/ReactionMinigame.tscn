@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://e36ocrxdh6q2" path="res://Scripts/Minigame/reaction_minigame.gd" id="1_1ohn1"]
 [ext_resource type="PackedScene" uid="uid://e3xhvo6g1m8w" path="res://Scenes/Minigame/RhythmEye.tscn" id="1_2vdql"]
-[ext_resource type="PackedScene" uid="uid://laxc5edg6lh3" path="res://Scenes/Minigame/Note.tscn" id="3_vijy5"]
 [ext_resource type="Texture2D" uid="uid://cwgjviciljolo" path="res://Assets/Animations/Life-Sheet.png" id="4_it1tt"]
 [ext_resource type="PackedScene" uid="uid://c3t0pl4tal4ou" path="res://Scenes/Audio/Conductor.tscn" id="5_it1tt"]
 
@@ -57,9 +56,6 @@ offset_left = -146.0
 offset_top = -56.0
 offset_right = -106.0
 offset_bottom = -33.0
-
-[node name="Note" parent="." unique_id=1525178449 instance=ExtResource("3_vijy5")]
-position = Vector2(200, 50)
 
 [node name="LifeMeter" type="AnimatedSprite2D" parent="." unique_id=1456665806]
 position = Vector2(-124, -69)
