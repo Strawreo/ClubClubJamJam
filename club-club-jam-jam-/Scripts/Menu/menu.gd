@@ -10,9 +10,13 @@ func _ready() -> void:
 	
 func on_button_pressed(button: Button) -> void:
 	match button.name:
-		"Back": 
-			var _game: bool = get_tree().change_scene_to_file("res://Scenes/Menu.tscn")
-		
+		"Play": 
+			var _game: bool = get_tree().change_scene_to_file("res://Scenes/Menu/Main.tscn")
+		"Credits":
+			var _credits: bool = get_tree().change_scene_to_file("res://Scenes/Menu/Credits.tscn")
+		"Quit":
+			get_tree().quit()
+
 func mouse_interaction(button: Button, state: String) -> void:
 	match state:
 		"exited":

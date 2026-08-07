@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqe4bdsjvtv8q"
-path="res://.godot/imported/SmallRocks.png-2f906e2af863c2462171e3f54c54b6f4.ctex"
+uid="uid://cvg28q7i5tok2"
+path="res://.godot/imported/TestSand.png-828f86f0f4fbb44610223ecf099da423.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/SmallRocks.png"
-dest_files=["res://.godot/imported/SmallRocks.png-2f906e2af863c2462171e3f54c54b6f4.ctex"]
+source_file="res://Assets/TestSand.png"
+dest_files=["res://.godot/imported/TestSand.png-828f86f0f4fbb44610223ecf099da423.ctex"]
 
 [params]
 

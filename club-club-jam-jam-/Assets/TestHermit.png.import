@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cey0io6jk2w4e"
-path="res://.godot/imported/CapIsolated.png-182da991c410f980c0be5cfcc8b4ef31.ctex"
+uid="uid://caubfg4swdy0f"
+path="res://.godot/imported/TestHermit.png-28053ee80d4bf63bd2a81a92572c9b34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/CapIsolated.png"
-dest_files=["res://.godot/imported/CapIsolated.png-182da991c410f980c0be5cfcc8b4ef31.ctex"]
+source_file="res://Assets/TestHermit.png"
+dest_files=["res://.godot/imported/TestHermit.png-28053ee80d4bf63bd2a81a92572c9b34.ctex"]
 
 [params]
 

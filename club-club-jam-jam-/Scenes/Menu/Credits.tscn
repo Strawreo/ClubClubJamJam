@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dgw887f7e6mlw"]
 
-[ext_resource type="Script" uid="uid://dkefw036v5ig0" path="res://Scripts/credits.gd" id="1_i8h6y"]
-[ext_resource type="FontFile" uid="uid://dkxbcf1wcafj1" path="res://Assets/Fonts/CozetteVector.ttf" id="2_xbebw"]
+[ext_resource type="Script" uid="uid://dkefw036v5ig0" path="res://Scripts/Menu/credits.gd" id="1_i8h6y"]
 
 [node name="Credits" type="Control" unique_id=1444699439]
 layout_mode = 3
@@ -40,7 +39,6 @@ theme_override_constants/separation = 20
 custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_xbebw")
 theme_override_font_sizes/font_size = 48
 text = "Nome1"
 horizontal_alignment = 1
@@ -49,7 +47,6 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_xbebw")
 theme_override_font_sizes/font_size = 48
 text = "Nome2"
 horizontal_alignment = 1
@@ -58,7 +55,6 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_xbebw")
 theme_override_font_sizes/font_size = 48
 text = "Nome3"
 horizontal_alignment = 1
@@ -67,7 +63,6 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(650, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_xbebw")
 theme_override_font_sizes/font_size = 48
 text = "Nome4"
 horizontal_alignment = 1
@@ -76,5 +71,4 @@ horizontal_alignment = 1
 layout_mode = 1
 offset_right = 110.0
 offset_bottom = 54.0
-theme_override_fonts/font = ExtResource("2_xbebw")
 text = "Back "

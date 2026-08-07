@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c8hh7yg6pjvk0"]
 
-[ext_resource type="Script" uid="uid://cmw1qkdxut4b0" path="res://Scripts/menu.gd" id="1_3kf3n"]
-[ext_resource type="FontFile" uid="uid://dkxbcf1wcafj1" path="res://Assets/Fonts/CozetteVector.ttf" id="2_6pedr"]
+[ext_resource type="Script" uid="uid://cmw1qkdxut4b0" path="res://Scripts/Menu/menu.gd" id="1_3kf3n"]
 
 [node name="Control" type="Control" unique_id=302165348]
 layout_mode = 3
@@ -23,23 +22,22 @@ color = Color(0.32411522, 0.6652055, 0.6706541, 1)
 
 [node name="EquipeNome" type="HBoxContainer" parent="." unique_id=456260761]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -198.5
+offset_left = -99.25
 offset_top = -44.0
-grow_horizontal = 0
+offset_right = 99.25
+grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 
 [node name="Label" type="Label" parent="EquipeNome" unique_id=1799462083]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 8
-theme_override_fonts/font = ExtResource("2_6pedr")
-text = "Equipe CNTRL'R"
+text = "PlaceHolder "
 
 [node name="MainMenu" type="VBoxContainer" parent="." unique_id=867378382]
 layout_mode = 1
@@ -48,10 +46,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -333.0
-offset_top = -177.0
-offset_right = 317.0
-offset_bottom = 169.0
+offset_left = -255.5
+offset_top = -173.0
+offset_right = 255.5
+offset_bottom = 173.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
@@ -62,11 +60,11 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 48
 text = "Nome do Jogo "
-horizontal_alignment = 2
+horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainMenu" unique_id=928132634]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 4
 size_flags_vertical = 8
 alignment = 1
 
@@ -76,17 +74,12 @@ theme_override_constants/separation = 20
 
 [node name="Play" type="Button" parent="MainMenu/HBoxContainer/VBoxContainer" unique_id=1063857656 groups=["Button"]]
 layout_mode = 2
-size_flags_horizontal = 0
-theme_override_fonts/font = ExtResource("2_6pedr")
 text = "Play"
 
 [node name="Credits" type="Button" parent="MainMenu/HBoxContainer/VBoxContainer" unique_id=2114428408 groups=["Button"]]
 layout_mode = 2
-size_flags_horizontal = 0
-theme_override_fonts/font = ExtResource("2_6pedr")
 text = "Credits"
 
 [node name="Quit" type="Button" parent="MainMenu/HBoxContainer/VBoxContainer" unique_id=1744676064 groups=["Button"]]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_6pedr")
 text = "Quit "

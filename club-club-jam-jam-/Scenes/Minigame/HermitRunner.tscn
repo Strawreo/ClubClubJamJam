@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://4vd3agalfqfo"]
+
+[ext_resource type="Script" uid="uid://dcau76olyjgc1" path="res://Scripts/Minigame/hermit_runner.gd" id="1_a07ty"]
+[ext_resource type="Texture2D" uid="uid://caubfg4swdy0f" path="res://Assets/TestHermit.png" id="2_6jqxw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_10siy"]
+radius = 6.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_08j8s"]
+radius = 6.0
+
+[node name="HermitRunner" type="CharacterBody2D" unique_id=907520693]
+collision_mask = 4
+script = ExtResource("1_a07ty")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=537741099]
+texture = ExtResource("2_6jqxw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=865357144]
+shape = SubResource("CircleShape2D_10siy")
+
+[node name="DeathArea" type="Area2D" parent="." unique_id=480042247]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea" unique_id=2067172119]
+shape = SubResource("CircleShape2D_08j8s")
+
+[connection signal="area_entered" from="DeathArea" to="." method="_on_death_area_area_entered"]

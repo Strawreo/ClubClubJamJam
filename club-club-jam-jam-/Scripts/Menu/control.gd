@@ -19,15 +19,15 @@ func _process(delta: float) -> void:
 func on_button_pressed(button: Button) -> void:
 	match button.name:
 		"VelocityMinigame":
-			get_tree().change_scene_to_file("res://Scenes/VelocityMinigame.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Minigame/VelocityMinigame.tscn")
 		"IntegrityMinigame":
-			get_tree().change_scene_to_file("res://Scenes/IntegrityMinigame.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Minigame/IntegrityMinigame.tscn")
 		"ReactionMinigame":
-			get_tree().change_scene_to_file("res://Scenes/ReactionMinigame.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Minigame/ReactionMinigame.tscn")
 		"StoreButton":
-			get_tree().change_scene_to_file("res://Scenes/StoreScene.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Menu/StoreScene.tscn")
 		"PlayButton":
-			get_tree().change_scene_to_file("res://Scenes/CourseScene.tscn")
+			get_tree().change_scene_to_file("res://Scenes/Course/CourseScene.tscn")
 		
 
 func mouse_interaction(button: Button, state: String) -> void:
