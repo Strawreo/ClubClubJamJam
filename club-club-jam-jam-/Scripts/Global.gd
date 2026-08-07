@@ -4,6 +4,14 @@ var player_shell:String = "Cap"
 var quantity_shells:int = 0
 var shells_got:Array = ["Cap"]
 
+var defense = 1
+var velocity = 1
+var reaction = 1
+var integrity = 1
+
+signal beat(position)
+signal measureSig(position) #For the audio player
+
 func _ready() -> void:
 	load_game()
 
@@ -17,6 +25,11 @@ func save_game():
 		file.store_line(player_shell)
 		file.store_line(str(quantity_shells))
 		file.store_line(",".join(shells_got))
+		
+		file.store_line(str(defense))
+		file.store_line(str(velocity))
+		file.store_line(str(reaction))
+		file.store_line(str(integrity))
 		
 		file.close()
 
@@ -36,4 +49,9 @@ func load_game():
 			shells_got = shells.split(",")
 		else:
 			shells_got = []
+		
+		defense = file.get_line().to_int()
+		velocity = file.get_line().to_int()
+		reaction = file.get_line().to_int()
+		integrity = file.get_line().to_int()
 		file.close()
