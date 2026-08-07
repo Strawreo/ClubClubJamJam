@@ -1,5 +1,7 @@
 extends Control
 
+var direction = Global.retry_scene_path
+
 func _ready() -> void:
 	for button in get_tree().get_nodes_in_group("Button"):
 		button.pressed.connect(on_button_pressed.bind(button))
@@ -7,13 +9,13 @@ func _ready() -> void:
 		button.mouse_entered.connect(mouse_interaction.bind(button,"entered"))
 		
 	pass 
-	
+
 func on_button_pressed(button: Button) -> void:
 	match button.name:
 		"Play": 
 			var _game: bool = get_tree().change_scene_to_file("res://Scenes/Menu/Main.tscn")
 		"Retry":
-			var _retry: bool = get_tree().change_scene_to_file("res://Scenes/Minigame/VelocityMinigame.tscn")
+			var _retry: bool = get_tree().change_scene_to_file(direction)
 
 func mouse_interaction(button: Button, state: String) -> void:
 	match state:

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://laxc5edg6lh3"]
+
+[ext_resource type="Texture2D" uid="uid://5gd82k6tcif2" path="res://Assets/Sprites/Note .png" id="1_dqnpd"]
+[ext_resource type="Script" uid="uid://bw2cq2wk3c441" path="res://Scripts/Minigame/note.gd" id="2_16kac"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16kac"]
+atlas = ExtResource("1_dqnpd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f6wxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16kac")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f6wxy"]
+
+[node name="Area2D" type="Area2D" unique_id=1791098764 groups=["Note"]]
+script = ExtResource("2_16kac")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1717187628]
+sprite_frames = SubResource("SpriteFrames_f6wxy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1071535783]
+shape = SubResource("CircleShape2D_f6wxy")
+
+[node name="Timer" type="Timer" parent="." unique_id=1022485740]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1890251624]
+
+[node name="Label" type="Label" parent="Node2D" unique_id=490789854]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -25,6 +25,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_death_area_area_entered(area: Area2D) -> void:
 	hide()
+	Global.retry_scene_path = "res://Scenes/Minigame/VelocityMinigame.tscn"
 	var game_over= GAME_OVER.instantiate()
 	get_parent().add_child(game_over)
 	queue_free()
