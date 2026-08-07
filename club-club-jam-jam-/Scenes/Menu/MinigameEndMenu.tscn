@@ -40,17 +40,17 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Retry"
 
-[node name="Velocidade" type="Label" parent="VBoxContainer" unique_id=560429801]
+[node name="Velocity" type="Label" parent="VBoxContainer" unique_id=560429801]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Velocity Gained"
 
-[node name="Integridade" type="Label" parent="VBoxContainer" unique_id=712734480]
+[node name="Integrity" type="Label" parent="VBoxContainer" unique_id=712734480]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Integrity Gained"
 
-[node name="Reação" type="Label" parent="VBoxContainer" unique_id=475129275]
+[node name="Reaction" type="Label" parent="VBoxContainer" unique_id=475129275]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Reaction Gained"
