@@ -12,14 +12,15 @@ func _unhandled_input(event: InputEvent) -> void:
 		frame = 1
 		if current_note != null:
 			if perfect:
-				get_parent().increment_score(1)
-				current_note.destroy()
+				get_parent().increment_score(2)
+				current_note.destroy(2)
 			elif good:
-				get_parent().increment_score(0)
-				current_note.destroy()
+				get_parent().increment_score(1)
+				current_note.destroy(1)
 				_reset()
 		else:
 			self.lose_life()
+			get_parent().increment_score(0)
 				
 	elif event.is_action_released("Action_Button"):
 		$PushTimer.start()	
@@ -27,6 +28,9 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func lose_life():
 	life -= 1
+	
+	var life_meter = get_parent().get_node("LifeMeter")
+	life_meter.frame += 1  
 	if life == 0:
 		life = 0 
 		Global.retry_scene_path = "res://Scenes/Minigame/ReactionMinigame.tscn"
