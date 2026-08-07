@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://3qyydhx0wd3m"]
+
+[ext_resource type="Script" uid="uid://yds7hjdtebjd" path="res://Scripts/Menu/minigame_end_menu.gd" id="1_e7ien"]
+
+[node name="MinigameEndMenu" type="Control" unique_id=96989379]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e7ien")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=977130095]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.5
+offset_top = -69.5
+offset_right = 144.5
+offset_bottom = 69.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=526956606]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="Play" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1548998187 groups=["Button"]]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Back"
+
+[node name="Retry" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=197529679 groups=["Button"]]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Retry"
+
+[node name="Velocidade" type="Label" parent="VBoxContainer" unique_id=560429801]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Velocity Gained"
+
+[node name="Integridade" type="Label" parent="VBoxContainer" unique_id=712734480]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Integrity Gained"
+
+[node name="Reação" type="Label" parent="VBoxContainer" unique_id=475129275]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Reaction Gained"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=859850837]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="Score" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=226644879]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Score"
