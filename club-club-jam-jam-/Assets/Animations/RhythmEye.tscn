@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://e3xhvo6g1m8w"]
-
-[ext_resource type="Texture2D" uid="uid://dpgnxxrn5o16r" path="res://Assets/Animations/RhythmEye-Sheet.png" id="1_f4ni3"]
-
-[node name="RhythmEye" type="Sprite2D" unique_id=745505810]
-texture = ExtResource("1_f4ni3")
-hframes = 2

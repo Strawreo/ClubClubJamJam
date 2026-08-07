@@ -1,5 +1,7 @@
 extends Node
 
+var retry_scene_path = ""
+
 var player_shell:String = "Cap"
 var quantity_shells:int = 0
 var shells_got:Array = ["Cap"]
