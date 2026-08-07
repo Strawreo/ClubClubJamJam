@@ -1,3 +1,12 @@
 [gd_scene format=3 uid="uid://bumx8bmlof6b6"]
 
+[ext_resource type="Script" uid="uid://d2qbplas4n84r" path="res://Scripts/Minigame/integrity_minigame.gd" id="1_bvhl7"]
+
 [node name="IntegrityMinigame" type="Node2D" unique_id=65620314]
+script = ExtResource("1_bvhl7")
+
+[node name="Eaten" type="Node2D" parent="." unique_id=336004330]
+
+[node name="Eating" type="Node2D" parent="." unique_id=1867177785]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1988478803]
