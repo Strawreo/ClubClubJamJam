@@ -1,32 +1,33 @@
 [gd_scene format=3 uid="uid://fn6e0unnr4y0"]
 
 [ext_resource type="Script" uid="uid://cq317to3ihgwx" path="res://Scripts/Minigame/obstacle.gd" id="1_vtrdp"]
-[ext_resource type="Texture2D" uid="uid://cvg28q7i5tok2" path="res://Assets/TestSand.png" id="2_ewuvn"]
+[ext_resource type="Texture2D" uid="uid://r7u60grkdjm7" path="res://Assets/Sprites/SeaGlassDarkGreen.png" id="2_5yuli"]
+[ext_resource type="Texture2D" uid="uid://motvmhhgtc0b" path="res://Assets/Sprites/BigSeaGlass.png" id="2_rya5d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_klwtp"]
-size = Vector2(16, 16)
+size = Vector2(21, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewuvn"]
-size = Vector2(16, 16)
+size = Vector2(27, 20)
 
 [node name="Obstacle" type="Area2D" unique_id=2025874973]
 collision_layer = 2
 script = ExtResource("1_vtrdp")
 
 [node name="SingleSprite" type="Sprite2D" parent="." unique_id=700002088]
-position = Vector2(0, -8)
-texture = ExtResource("2_ewuvn")
+position = Vector2(1, -8.54)
+texture = ExtResource("2_5yuli")
 
 [node name="DoubleSprite" type="Sprite2D" parent="." unique_id=582403741]
-position = Vector2(0, -24)
-texture = ExtResource("2_ewuvn")
+position = Vector2(0, -15.07)
+texture = ExtResource("2_rya5d")
 
 [node name="SingleArea" type="CollisionShape2D" parent="." unique_id=57794508]
-position = Vector2(0, -8)
+position = Vector2(2.5, -8)
 shape = SubResource("RectangleShape2D_klwtp")
 
 [node name="DoubleArea" type="CollisionShape2D" parent="." unique_id=1778781662]
-position = Vector2(0, -24)
+position = Vector2(0.5, -11)
 shape = SubResource("RectangleShape2D_ewuvn")
 
 [node name="DeathTimer" type="Timer" parent="." unique_id=1300167580]
