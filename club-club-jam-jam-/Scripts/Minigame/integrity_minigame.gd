@@ -5,6 +5,7 @@ var AppleScene = preload("res://Scenes/Minigame/Apple.tscn")
 
 var current_apple
 var index = 5
+var score = 0
 
 var time: int = 30:
 	set(new_value):
@@ -31,6 +32,7 @@ func spawn_apple():
 	current_apple = apple
 	$Eating.add_child(apple)
 	index += 1
+	score += 1
 
 func update_apple_time():
 	var container = get_node_or_null("Eating")
@@ -43,7 +45,9 @@ func _on_timer_timeout() -> void:
 	time -= 1
 	if time <= 0:
 		var game_over = GAME_OVER.instantiate()
-		$CanvasLayer.add_child(game_over)
+		game_over.attribute = "Integrity"
+		game_over.score = score
+		add_child(game_over)
 		time = 0
 	else:
 		$Timer.start()

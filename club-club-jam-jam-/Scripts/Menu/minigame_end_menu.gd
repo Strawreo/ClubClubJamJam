@@ -1,4 +1,7 @@
-extends Control
+extends CanvasLayer
+
+var score: int
+var attribute: String
 
 var direction = Global.retry_scene_path
 
@@ -7,8 +10,20 @@ func _ready() -> void:
 		button.pressed.connect(on_button_pressed.bind(button))
 		button.mouse_exited.connect(mouse_interaction.bind(button,"exited"))
 		button.mouse_entered.connect(mouse_interaction.bind(button,"entered"))
-		
-	pass 
+	@warning_ignore("integer_division")
+	var addition = 0
+	if score != null:
+		match attribute:
+			"Velocity":
+				addition = (score/8)
+				Global.velocity += addition
+			"Integrity":
+				addition = (score/5)
+				Global.integrity += addition
+			"Reaction":
+				addition = (score/6)
+				Global.reaction += addition
+	$VBoxContainer/Attribute.text = attribute+" gained: "+str(addition)
 
 func on_button_pressed(button: Button) -> void:
 	match button.name:

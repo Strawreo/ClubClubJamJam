@@ -29,6 +29,10 @@ window/stretch/mode="viewport"
 
 project/assembly_name="Club Club Jam Jam"
 
+[gui]
+
+theme/custom_font="uid://dkxbcf1wcafj1"
+
 [input]
 
 Action_Button={

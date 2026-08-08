@@ -3,7 +3,7 @@ extends Node2D
 enum State { APPEARING, EATING, EATEN }
 var state: State = State.APPEARING
 
-var condition = 20
+var condition = 10
 var next_position
 
 var time
