@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dbrx3lygpb5kg"]
+
+[ext_resource type="Texture2D" uid="uid://tkhpep66oth1" path="res://Assets/Sprites/Menu .png" id="1_n2lnh"]
+
+[node name="MenuElements" type="NinePatchRect" unique_id=1302309692]
+offset_right = 105.0
+offset_bottom = 47.0
+texture = ExtResource("1_n2lnh")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
