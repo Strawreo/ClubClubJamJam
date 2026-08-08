@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://nqb4h1whuky6"]
 
 [ext_resource type="Texture2D" uid="uid://cvg28q7i5tok2" path="res://Assets/TestSand.png" id="1_l7niq"]
-[ext_resource type="PackedScene" uid="uid://dlauru8wje1ay" path="res://Scenes/Course/Enemies/Hedgehog.tscn" id="2_jd8ux"]
 [ext_resource type="PackedScene" uid="uid://byvtansre74xt" path="res://Scenes/Course/CourseCrab.tscn" id="3_q586g"]
+[ext_resource type="PackedScene" uid="uid://ddep7phgo77rl" path="res://Scenes/Course/Enemies/Seahorse.tscn" id="4_q586g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dc7il"]
 texture = ExtResource("1_l7niq")
@@ -20,14 +20,14 @@ sources/0 = SubResource("TileSetAtlasSource_dc7il")
 tile_map_data = PackedByteArray("AAAAAA8AAAAAAAAAAAABAA8AAAAAAAAAAAACAA8AAAAAAAAAAAADAA8AAAAAAAAAAAAEAA8AAAAAAAAAAAAFAA8AAAAAAAAAAAAGAA8AAAAAAAAAAAAHAA8AAAAAAAAAAAAIAA8AAAAAAAAAAAAJAA8AAAAAAAAAAAAKAA8AAAAAAAAAAAALAA8AAAAAAAAAAAAMAA8AAAAAAAAAAAANAA8AAAAAAAAAAAAOAA8AAAAAAAAAAAAPAA8AAAAAAAAAAAAQAA8AAAAAAAAAAAARAA8AAAAAAAAAAAASAA8AAAAAAAAAAAATAA8AAAAAAAAAAAAUAA8AAAAAAAAAAAAVAA8AAAAAAAAAAAAWAA8AAAAAAAAAAAAXAA8AAAAAAAAAAAAYAA8AAAAAAAAAAAAZAA8AAAAAAAAAAAAaAA8AAAAAAAAAAAAbAA8AAAAAAAAAAAAcAA8AAAAAAAAAAAAdAA8AAAAAAAAAAAAeAA8AAAAAAAAAAAAfAA8AAAAAAAAAAAAgAA8AAAAAAAAAAAAhAA8AAAAAAAAAAAAiAA8AAAAAAAAAAAAjAA8AAAAAAAAAAAAkAA8AAAAAAAAAAAAlAA8AAAAAAAAAAAAmAA8AAAAAAAAAAAAnAA8AAAAAAAAAAAAoAA8AAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_ev4kj")
 
-[node name="Hedgehog" parent="." unique_id=287728898 instance=ExtResource("2_jd8ux")]
-position = Vector2(337, 217)
-
 [node name="CourseCrab" parent="." unique_id=2121491479 instance=ExtResource("3_q586g")]
-position = Vector2(95, 227)
+position = Vector2(95, 234)
 
 [node name="Camera2D" type="Camera2D" parent="CourseCrab" unique_id=1307537017]
 zoom = Vector2(2, 2)
 limit_left = 0
 limit_top = -320
 limit_bottom = 640
+
+[node name="SeaHorse" parent="." unique_id=1895880688 instance=ExtResource("4_q586g")]
+position = Vector2(241, 191)

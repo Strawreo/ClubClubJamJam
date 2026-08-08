@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dlauru8wje1ay"]
 
-[ext_resource type="Texture2D" uid="uid://b5u8txwxqti6j" path="res://Assets/icon.svg" id="1_bjsfp"]
+[ext_resource type="Texture2D" uid="uid://bo3irmi3enbog" path="res://Assets/Sprites/SeaUrchin.png" id="1_bjsfp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ev4kj"]
-size = Vector2(50, 48)
+size = Vector2(13, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tl5bo"]
-size = Vector2(54, 47)
+size = Vector2(16, 11)
 
 [node name="Hedgehog" type="CharacterBody2D" unique_id=287728898]
 collision_layer = 0
@@ -18,12 +18,12 @@ scale = Vector2(0.4140625, 0.3828125)
 texture = ExtResource("1_bjsfp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=623602376]
-position = Vector2(-1, -6)
+position = Vector2(-0.5, -6.5)
 shape = SubResource("RectangleShape2D_ev4kj")
 
 [node name="HedgehogArea" type="Area2D" parent="." unique_id=339389318 groups=["Enemies"]]
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HedgehogArea" unique_id=1225253241]
-position = Vector2(-1, -5.5)
+position = Vector2(-1, -6.5)
 shape = SubResource("RectangleShape2D_tl5bo")

@@ -68,10 +68,10 @@ public partial class CourseCrab : CharacterBody2D
 	private void OnAreaEntered(Area2D area){
 		if(area.IsInGroup("Enemies")){
 			if(area.Name == "HedgehogArea"){
-				Defense -= 1;
+				
 			}
 			else if(!Dodge()){
-				Defense -= 1;
+				
 			}
 			else{
 				//Colocar animação de desvio
