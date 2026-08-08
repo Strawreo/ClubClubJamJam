@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7q51feygh6up"
-path="res://.godot/imported/CoralYellow.png-47086eab7fb578f75739e5f21c1e8f07.ctex"
+uid="uid://dngb1yhkytyxa"
+path="res://.godot/imported/ConeIsolated.png-5f7e2d9406818fd66010f5c881d7c83e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/CoralYellow.png"
-dest_files=["res://.godot/imported/CoralYellow.png-47086eab7fb578f75739e5f21c1e8f07.ctex"]
+source_file="res://Assets/Sprites/Shells/ConeIsolated.png"
+dest_files=["res://.godot/imported/ConeIsolated.png-5f7e2d9406818fd66010f5c881d7c83e.ctex"]
 
 [params]
 

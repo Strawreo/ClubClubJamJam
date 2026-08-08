@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7q51feygh6up"
-path="res://.godot/imported/CoralYellow.png-47086eab7fb578f75739e5f21c1e8f07.ctex"
+uid="uid://1v1q0uoy0utc"
+path="res://.godot/imported/TallGrass1.png-3f328f37010c90166e2167182c647fd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/CoralYellow.png"
-dest_files=["res://.godot/imported/CoralYellow.png-47086eab7fb578f75739e5f21c1e8f07.ctex"]
+source_file="res://Assets/Sprites/Backgrounds/TallGrass1.png"
+dest_files=["res://.godot/imported/TallGrass1.png-3f328f37010c90166e2167182c647fd1.ctex"]
 
 [params]
 

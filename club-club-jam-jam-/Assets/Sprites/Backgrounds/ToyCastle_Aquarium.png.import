@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7q51feygh6up"
-path="res://.godot/imported/CoralYellow.png-47086eab7fb578f75739e5f21c1e8f07.ctex"
+uid="uid://d2lrd3vy1r1f8"
+path="res://.godot/imported/ToyCastle_Aquarium.png-1c7daeb1d7e6a3199c90a54afc6842d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/CoralYellow.png"
-dest_files=["res://.godot/imported/CoralYellow.png-47086eab7fb578f75739e5f21c1e8f07.ctex"]
+source_file="res://Assets/Sprites/Backgrounds/ToyCastle_Aquarium.png"
+dest_files=["res://.godot/imported/ToyCastle_Aquarium.png-1c7daeb1d7e6a3199c90a54afc6842d9.ctex"]
 
 [params]
 

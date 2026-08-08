@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7q51feygh6up"
-path="res://.godot/imported/CoralYellow.png-47086eab7fb578f75739e5f21c1e8f07.ctex"
+uid="uid://bj50lojnrw5dp"
+path="res://.godot/imported/SeaGlassGreen.png-46a5b4160f87c487d365478a0db2d890.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/CoralYellow.png"
-dest_files=["res://.godot/imported/CoralYellow.png-47086eab7fb578f75739e5f21c1e8f07.ctex"]
+source_file="res://Assets/Sprites/Interactables/SeaGlassGreen.png"
+dest_files=["res://.godot/imported/SeaGlassGreen.png-46a5b4160f87c487d365478a0db2d890.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7q51feygh6up"
-path="res://.godot/imported/CoralYellow.png-47086eab7fb578f75739e5f21c1e8f07.ctex"
+uid="uid://dqe4bdsjvtv8q"
+path="res://.godot/imported/SmallRocks.png-46337e35e2131df35a0204110503d0b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/CoralYellow.png"
-dest_files=["res://.godot/imported/CoralYellow.png-47086eab7fb578f75739e5f21c1e8f07.ctex"]
+source_file="res://Assets/Sprites/Backgrounds/SmallRocks.png"
+dest_files=["res://.godot/imported/SmallRocks.png-46337e35e2131df35a0204110503d0b7.ctex"]
 
 [params]
 

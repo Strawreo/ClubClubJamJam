@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7q51feygh6up"
-path="res://.godot/imported/CoralYellow.png-47086eab7fb578f75739e5f21c1e8f07.ctex"
+uid="uid://b7g7i0eb1tkhw"
+path="res://.godot/imported/SandTop.png-d6b7795b1143cdf186900c5b008fc795.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/CoralYellow.png"
-dest_files=["res://.godot/imported/CoralYellow.png-47086eab7fb578f75739e5f21c1e8f07.ctex"]
+source_file="res://Assets/Sprites/Backgrounds/SandTop.png"
+dest_files=["res://.godot/imported/SandTop.png-d6b7795b1143cdf186900c5b008fc795.ctex"]
 
 [params]
 
