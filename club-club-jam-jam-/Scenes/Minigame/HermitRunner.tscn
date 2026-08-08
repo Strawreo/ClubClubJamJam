@@ -1,7 +1,36 @@
 [gd_scene format=3 uid="uid://4vd3agalfqfo"]
 
 [ext_resource type="Script" uid="uid://dcau76olyjgc1" path="res://Scripts/Minigame/hermit_runner.gd" id="1_a07ty"]
-[ext_resource type="Texture2D" uid="uid://caubfg4swdy0f" path="res://Assets/TestHermit.png" id="2_6jqxw"]
+[ext_resource type="Texture2D" uid="uid://dpiydydhn4v2u" path="res://Assets/Animations/Hermit-Sheet.png" id="2_pnjmh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2h51k"]
+atlas = ExtResource("2_pnjmh")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71h03"]
+atlas = ExtResource("2_pnjmh")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u28m"]
+atlas = ExtResource("2_pnjmh")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f6wxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2h51k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71h03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u28m")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_10siy"]
 radius = 6.5
@@ -13,8 +42,11 @@ radius = 6.0
 collision_mask = 4
 script = ExtResource("1_a07ty")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=537741099]
-texture = ExtResource("2_6jqxw")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=553251486]
+sprite_frames = SubResource("SpriteFrames_f6wxy")
+autoplay = "default"
+frame = 2
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=865357144]
 shape = SubResource("CircleShape2D_10siy")
