@@ -6,12 +6,18 @@ var state: State = State.APPEARING
 var condition = 20
 var next_position
 
+var time
+
 func _ready() -> void:
 	$Sprite2D.visible = false
 	$AnimationPlayer.play("Appear")
+	await get_tree().process_frame
+	var minigame = get_parent().get_parent()
+	if minigame:
+		time = minigame.time
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Action_Button") and state == State.EATING:
+	if Input.is_action_just_pressed("Action_Button") and state == State.EATING and time > 0:
 		take_damage()
 		$AnimationPlayer.stop()
 		$AnimationPlayer.play("Shaking")
@@ -20,6 +26,9 @@ func _process(delta: float) -> void:
 
 func take_damage():
 	condition -= 1
+
+func update_time(new_time):
+	time = new_time
 
 func eaten():
 	$AnimationPlayer.stop()

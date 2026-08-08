@@ -13,8 +13,7 @@ config_version=5
 config/name="Club Club Jam Jam"
 run/main_scene="uid://c8hh7yg6pjvk0"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
->>>>>>> 381782d0eef24d920da211bcf08f157becd1893f
-config/icon="res://Assets/icon.svg"
+>>>>>>>381782d0eef24d920da211bcf08f157becd1893fconfig/icon="res://Assets/icon.svg"
 
 [autoload]
 

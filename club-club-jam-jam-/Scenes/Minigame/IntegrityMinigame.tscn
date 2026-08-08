@@ -10,6 +10,7 @@ script = ExtResource("1_bvhl7")
 [node name="Eating" type="Node2D" parent="." unique_id=1867177785]
 
 [node name="AppleSpawn" type="Marker2D" parent="." unique_id=1422343902]
+position = Vector2(-76, 36)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1988478803]
 zoom = Vector2(2.5, 2.5)
