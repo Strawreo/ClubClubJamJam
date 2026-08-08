@@ -11,8 +11,8 @@ var velocity = 1
 var reaction = 1
 var integrity = 1
 
-signal beat(position)
-signal measureSig(position) #For the audio player
+#signal beat(position)
+#signal measureSig(position) #For the audio player
 
 func _ready() -> void:
 	load_game()

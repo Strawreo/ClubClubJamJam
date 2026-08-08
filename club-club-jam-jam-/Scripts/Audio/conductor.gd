@@ -15,6 +15,9 @@ var measure = 1
 var closest = 0
 var time_off_beat = 0.0 
 
+signal beat(song_position_in_beats)
+signal measure_sig(measure)
+
 func _ready() -> void:
 	sec_per_beat = 60.0 / bpm 
 	pass 
@@ -31,8 +34,8 @@ func _report_beat():
 	if last_reported_beat < song_position_in_beats:
 		if measure > measures:
 			measure = 1
-		Global.beat.emit(song_position_in_beats)
-		Global.measureSig.emit(measure)
+		beat.emit(song_position_in_beats)
+		measure_sig.emit(measure)
 		last_reported_beat = song_position_in_beats
 		measure += 1
 
