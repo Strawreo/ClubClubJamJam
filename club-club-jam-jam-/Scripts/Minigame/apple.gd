@@ -1,11 +1,35 @@
 extends Node2D
 
+enum State { APPEARING, EATING, EATEN }
+var state: State = State.APPEARING
 
-# Called when the node enters the scene tree for the first time.
+var condition = 20
+var next_position
+
 func _ready() -> void:
-	pass # Replace with function body.
+	$Sprite2D.visible = false
+	$AnimationPlayer.play("Appear")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("Action_Button") and state == State.EATING:
+		take_damage()
+		$AnimationPlayer.stop()
+		$AnimationPlayer.play("Shaking")
+	if condition <= 0 and state != State.EATEN:
+		eaten()
+
+func take_damage():
+	condition -= 1
+
+func eaten():
+	$AnimationPlayer.stop()
+	$Sprite2D.visible = false
+	$Sprite2D.frame = 1
+	global_position = next_position
+	state = State.EATEN
+	$AnimationPlayer.play("Eaten")
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if state == State.APPEARING:
+		state = State.EATING
+	$AnimationPlayer.play("Idle")

@@ -9,4 +9,20 @@ script = ExtResource("1_bvhl7")
 
 [node name="Eating" type="Node2D" parent="." unique_id=1867177785]
 
+[node name="AppleSpawn" type="Marker2D" parent="." unique_id=1422343902]
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1988478803]
+zoom = Vector2(2.5, 2.5)
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=870979381]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=772021985]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Timer" type="Timer" parent="." unique_id=494326800]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
