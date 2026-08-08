@@ -10,10 +10,12 @@ const GAME_OVER= preload("res://Scenes/Menu/MinigameEndMenu.tscn")
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Action_Button",false):
 		frame = 1
+		print("Rhythm Eye Activated")
 		if current_note != null:
 			if perfect:
 				get_parent().increment_score(2)
 				current_note.destroy(2)
+				_reset()
 			elif good:
 				get_parent().increment_score(1)
 				current_note.destroy(1)
@@ -49,19 +51,24 @@ func _reset():
 
 func _on_good_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Note"):
-		good = true 
 		current_note = area
+		good = true 
+		print("Good area entered")
+		
 
 
 func _on_good_area_area_exited(area: Area2D) -> void:
 	if area.is_in_group("Note"):
 		good = false
 		current_note = null
+		print("Good area exited")
 
 func _on_perfect_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Note"):
 		perfect = true
+		print("Perfect area entered")
 		
 func _on_perfect_area_area_exited(area: Area2D) -> void:
 	if area.is_in_group("Note"):
 		perfect = false
+		print("Perfect area exited")

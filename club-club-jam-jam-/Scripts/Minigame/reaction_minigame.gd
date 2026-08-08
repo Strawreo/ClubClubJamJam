@@ -42,12 +42,12 @@ func increment_score(num:int):
 
 func _on_conductor_beat(position) -> void:
 	song_position_in_beats = position
-	if song_position_in_beats <= 20:
+	if song_position_in_beats <= 40:
 		spawn_1_beat = 1
 		spawn_2_beat = 0
 		spawn_3_beat = 0
 		spawn_4_beat = 0
-	elif song_position_in_beats > 20 and song_position_in_beats <= 40:
+	elif song_position_in_beats > 40 and song_position_in_beats <= 80:
 		spawn_1_beat = 1
 		spawn_2_beat = 0
 		spawn_3_beat = 1
@@ -56,7 +56,7 @@ func _on_conductor_beat(position) -> void:
 		spawn_1_beat = randi_range(0,3)
 		spawn_2_beat = randi_range(0,2)
 		spawn_3_beat = randi_range(0,3)
-		spawn_4_beat = randi_range(0,2)
+		spawn_4_beat = randi_range(0,4)
 
 func _on_conductor_measure_sig(position) -> void:
 	if position == 1:
