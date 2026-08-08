@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Area2D
 
 const TARGET_X = -111
 const SPAWN_X = 200
@@ -15,16 +15,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	if !hit:
-		position.x -= speed * delta
+	if not hit:
+		position.x += speed * delta
 		if position.x < -200:
-			get_parent().increment_score(0)
+			get_tree().call_group("minigame", "increment_score", 0)
 			queue_free()
 
 func initialize():
 	$AnimatedSprite2D.frame = 0 
 	position = LANE
 	speed = DIST_TO_TARGET / 2.0
+	print(" Note spawned")
 
 func destroy(score):
 	$AnimatedSprite2D.visible = false

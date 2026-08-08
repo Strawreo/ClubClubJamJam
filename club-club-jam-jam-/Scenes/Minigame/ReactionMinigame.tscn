@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://e36ocrxdh6q2" path="res://Scripts/Minigame/reaction_minigame.gd" id="1_1ohn1"]
 [ext_resource type="PackedScene" uid="uid://e3xhvo6g1m8w" path="res://Scenes/Minigame/RhythmEye.tscn" id="1_2vdql"]
 [ext_resource type="Texture2D" uid="uid://cwgjviciljolo" path="res://Assets/Animations/Life-Sheet.png" id="4_it1tt"]
+[ext_resource type="AudioStream" uid="uid://cc12cif6byhux" path="res://Assets/Songs/Aquario.ogg" id="5_0c1mn"]
 [ext_resource type="PackedScene" uid="uid://c3t0pl4tal4ou" path="res://Scenes/Audio/Conductor.tscn" id="5_it1tt"]
+[ext_resource type="PackedScene" uid="uid://laxc5edg6lh3" path="res://Scenes/Minigame/Note.tscn" id="6_0c1mn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0c1mn"]
 atlas = ExtResource("4_it1tt")
@@ -41,7 +43,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="ReactionMinigame" type="Node2D" unique_id=1732976869]
+[node name="ReactionMinigame" type="Node2D" unique_id=1732976869 groups=["minigame"]]
 script = ExtResource("1_1ohn1")
 
 [node name="RhythmEye" parent="." unique_id=465855352 instance=ExtResource("1_2vdql")]
@@ -62,3 +64,13 @@ position = Vector2(-124, -69)
 sprite_frames = SubResource("SpriteFrames_f6wxy")
 
 [node name="Conductor" parent="." unique_id=19528804 instance=ExtResource("5_it1tt")]
+stream = ExtResource("5_0c1mn")
+autoplay = true
+
+[node name="NotesContainer" type="Node2D" parent="." unique_id=1003740207]
+
+[node name="Note" parent="." unique_id=1791098764 instance=ExtResource("6_0c1mn")]
+position = Vector2(200, 50)
+
+[connection signal="beat" from="Conductor" to="." method="_on_conductor_beat"]
+[connection signal="measure_sig" from="Conductor" to="." method="_on_conductor_measure_sig"]
