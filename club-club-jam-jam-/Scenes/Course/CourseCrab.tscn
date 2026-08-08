@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://byvtansre74xt"]
+
+[ext_resource type="Script" uid="uid://dnvoifpuaf1ye" path="res://Scripts/Course/CourseCrab.cs" id="1_1a2j1"]
+[ext_resource type="Texture2D" uid="uid://caubfg4swdy0f" path="res://Assets/TestHermit.png" id="2_gky5u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ev4kj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gky5u")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tl5bo"]
+size = Vector2(12, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2e0fd"]
+size = Vector2(14, 12)
+
+[node name="CourseCrab" type="CharacterBody2D" unique_id=2121491479 node_paths=PackedStringArray("HitArea")]
+collision_mask = 6
+script = ExtResource("1_1a2j1")
+HitArea = NodePath("HitArea")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=364192214]
+sprite_frames = SubResource("SpriteFrames_ev4kj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1942107122]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_tl5bo")
+
+[node name="HitArea" type="Area2D" parent="." unique_id=462850125]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea" unique_id=1711547726]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_2e0fd")

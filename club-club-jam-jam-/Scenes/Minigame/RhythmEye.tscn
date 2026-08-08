@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://e3xhvo6g1m8w"]
+
+[ext_resource type="Texture2D" uid="uid://dpgnxxrn5o16r" path="res://Assets/Animations/RhythmEye-Sheet.png" id="1_3x8dx"]
+[ext_resource type="Script" uid="uid://cr8xqlhedlli2" path="res://Scripts/Minigame/rhythm_eye.gd" id="2_nss45"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4ni3"]
+atlas = ExtResource("1_3x8dx")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0qmn"]
+atlas = ExtResource("1_3x8dx")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f6wxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4ni3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0qmn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6wxy"]
+size = Vector2(58, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ms4e4"]
+size = Vector2(26, 20)
+
+[node name="RhythmEye" type="AnimatedSprite2D" unique_id=465855352]
+sprite_frames = SubResource("SpriteFrames_f6wxy")
+script = ExtResource("2_nss45")
+
+[node name="GoodArea" type="Area2D" parent="." unique_id=1787345175]
+
+[node name="GoodCollision" type="CollisionShape2D" parent="GoodArea" unique_id=762598322]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_f6wxy")
+
+[node name="PerfectArea" type="Area2D" parent="." unique_id=615158448]
+
+[node name="PerfectCollision" type="CollisionShape2D" parent="PerfectArea" unique_id=1118816040]
+shape = SubResource("RectangleShape2D_ms4e4")
+
+[node name="PushTimer" type="Timer" parent="." unique_id=848896768]
+wait_time = 0.107
+
+[connection signal="area_entered" from="GoodArea" to="." method="_on_good_area_area_entered"]
+[connection signal="area_exited" from="GoodArea" to="." method="_on_good_area_area_exited"]
+[connection signal="area_entered" from="PerfectArea" to="." method="_on_perfect_area_area_entered"]
+[connection signal="area_exited" from="PerfectArea" to="." method="_on_perfect_area_area_exited"]
+[connection signal="timeout" from="PushTimer" to="." method="_on_push_timer_timeout"]

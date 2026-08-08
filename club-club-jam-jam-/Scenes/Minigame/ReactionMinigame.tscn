@@ -1,3 +1,64 @@
 [gd_scene format=3 uid="uid://exfiow7b3qct"]
 
+[ext_resource type="Script" uid="uid://e36ocrxdh6q2" path="res://Scripts/Minigame/reaction_minigame.gd" id="1_1ohn1"]
+[ext_resource type="PackedScene" uid="uid://e3xhvo6g1m8w" path="res://Scenes/Minigame/RhythmEye.tscn" id="1_2vdql"]
+[ext_resource type="Texture2D" uid="uid://cwgjviciljolo" path="res://Assets/Animations/Life-Sheet.png" id="4_it1tt"]
+[ext_resource type="PackedScene" uid="uid://c3t0pl4tal4ou" path="res://Scenes/Audio/Conductor.tscn" id="5_it1tt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0c1mn"]
+atlas = ExtResource("4_it1tt")
+region = Rect2(0, 0, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0t2y"]
+atlas = ExtResource("4_it1tt")
+region = Rect2(48, 0, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3kit"]
+atlas = ExtResource("4_it1tt")
+region = Rect2(96, 0, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toviy"]
+atlas = ExtResource("4_it1tt")
+region = Rect2(144, 0, 48, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f6wxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0c1mn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0t2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3kit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toviy")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="ReactionMinigame" type="Node2D" unique_id=1732976869]
+script = ExtResource("1_1ohn1")
+
+[node name="RhythmEye" parent="." unique_id=465855352 instance=ExtResource("1_2vdql")]
+position = Vector2(-111, 50)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=394337395]
+zoom = Vector2(2, 2)
+metadata/_edit_lock_ = true
+
+[node name="Score" type="Label" parent="." unique_id=135588937]
+offset_left = -146.0
+offset_top = -56.0
+offset_right = -106.0
+offset_bottom = -33.0
+
+[node name="LifeMeter" type="AnimatedSprite2D" parent="." unique_id=1456665806]
+position = Vector2(-124, -69)
+sprite_frames = SubResource("SpriteFrames_f6wxy")
+
+[node name="Conductor" parent="." unique_id=19528804 instance=ExtResource("5_it1tt")]
