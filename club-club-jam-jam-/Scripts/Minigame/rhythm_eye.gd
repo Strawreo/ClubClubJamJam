@@ -4,7 +4,9 @@ var good = false
 var current_note = null 
 var life = 3
 
-const GAME_OVER= preload("res://Scenes/Menu/MinigameEndMenu.tscn")
+var score
+
+const GAME_OVER = preload("res://Scenes/Menu/MinigameEndMenu.tscn")
 @export var input = ""
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -28,6 +30,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		$PushTimer.start()	
 		frame = 0 	
 
+func update_score(new_score):
+	score = new_score
+
 func lose_life():
 	life -= 1
 	
@@ -37,9 +42,11 @@ func lose_life():
 		life = 0 
 		Global.retry_scene_path = "res://Scenes/Minigame/ReactionMinigame.tscn"
 		var game_over = GAME_OVER.instantiate()
+		game_over.attribute = "Reaction"
+		game_over.score = score
 		get_parent().add_child(game_over)
 		queue_free()
-	
+
 func _on_push_timer_timeout() -> void:
 	frame = 0
 

@@ -8,7 +8,9 @@ func _ready() -> void:
 			button.pressed.connect(on_button_pressed.bind(button))
 			button.mouse_exited.connect(mouse_interaction.bind(button,"exited"))
 			button.mouse_entered.connect(mouse_interaction.bind(button,"entered"))
-	pass 
+	$Attributes/VBoxContainer/Integrity.text = "Integrity: "+str(Global.integrity)
+	$Attributes/VBoxContainer/Reaction.text = "Reaction: "+str(Global.reaction)
+	$Attributes/VBoxContainer/Velocity.text = "Velocity: "+str(Global.velocity)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

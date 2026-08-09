@@ -27,15 +27,15 @@ theme_override_constants/separation = 20
 
 [node name="VelocityMinigame" type="Button" parent="Control/Minigames/VBoxContainer" unique_id=606944242 groups=["Button"]]
 layout_mode = 2
-text = "Minigame1"
+text = "Run"
 
 [node name="IntegrityMinigame" type="Button" parent="Control/Minigames/VBoxContainer" unique_id=1625540172 groups=["Button"]]
 layout_mode = 2
-text = "Minigame2"
+text = "Eat"
 
 [node name="ReactionMinigame" type="Button" parent="Control/Minigames/VBoxContainer" unique_id=2085551704 groups=["Button"]]
 layout_mode = 2
-text = "Minigame2"
+text = "Play Catch"
 
 [node name="Attributes" type="HBoxContainer" parent="Control" unique_id=594343493]
 layout_mode = 1
@@ -83,7 +83,7 @@ theme_override_constants/separation = 0
 
 [node name="StoreButton" type="Button" parent="Control/Store" unique_id=1460714293 groups=["Button"]]
 layout_mode = 2
-text = "Store"
+text = "Visit Store"
 
 [node name="Play" type="HBoxContainer" parent="Control" unique_id=1368595764]
 layout_mode = 1

@@ -1,6 +1,9 @@
 extends Node2D
 
-var score:int = 0 
+var score: int = 0:
+	set(new_value):
+		score = new_value
+		update_score()
 var combo = 0 
 
 var bpm = 100
@@ -39,6 +42,9 @@ func increment_score(num:int):
 	score += num * combo 
 	$Score.text = str(score)	
 
+func update_score():
+	if has_node("RhythmEye"):
+		$RhythmEye.update_score(score)
 
 func _on_conductor_beat(position) -> void:
 	song_position_in_beats = position

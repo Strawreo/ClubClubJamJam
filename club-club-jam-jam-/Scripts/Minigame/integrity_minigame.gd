@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 	if current_apple.state == current_apple.State.EATEN and time > 0:
 		current_apple.reparent($Eaten)
 		$Eaten.move_child(current_apple, 0)
+		score += 1
 		spawn_apple()
 
 func spawn_apple():
@@ -32,7 +33,6 @@ func spawn_apple():
 	current_apple = apple
 	$Eating.add_child(apple)
 	index += 1
-	score += 1
 
 func update_apple_time():
 	var container = get_node_or_null("Eating")
@@ -44,10 +44,12 @@ func update_apple_time():
 func _on_timer_timeout() -> void:
 	time -= 1
 	if time <= 0:
+		Global.retry_scene_path = "res://Scenes/Minigame/IntegrityMinigame.tscn"
 		var game_over = GAME_OVER.instantiate()
 		game_over.attribute = "Integrity"
 		game_over.score = score
 		add_child(game_over)
+		$CanvasLayer/Label.visible = false
 		time = 0
 	else:
 		$Timer.start()

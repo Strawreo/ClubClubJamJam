@@ -21,7 +21,7 @@ func _ready() -> void:
 				addition = (score/5)
 				Global.integrity += addition
 			"Reaction":
-				addition = (score/6)
+				addition = (score/200)
 				Global.reaction += addition
 	$VBoxContainer/Attribute.text = attribute+" gained: "+str(addition)
 

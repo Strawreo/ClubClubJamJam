@@ -3,8 +3,9 @@ extends CharacterBody2D
 const SPEED = 200.0
 const MAX_JUMP_VELOCITY = -300.0
 const MIN_JUMP_VELOCITY = -200.0
-const GAME_OVER= preload("res://Scenes/Menu/MinigameEndMenu.tscn")
+const GAME_OVER = preload("res://Scenes/Menu/MinigameEndMenu.tscn")
 
+var score = 0
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -26,7 +27,12 @@ func _physics_process(delta: float) -> void:
 func _on_death_area_area_entered(area: Area2D) -> void:
 	hide()
 	Global.retry_scene_path = "res://Scenes/Minigame/VelocityMinigame.tscn"
-	var game_over= GAME_OVER.instantiate()
+	var game_over = GAME_OVER.instantiate()
+	game_over.attribute = "Velocity"
+	game_over.score = score
 	get_parent().add_child(game_over)
 	queue_free()
-	
+
+
+func _on_score_area_area_entered(area: Area2D) -> void:
+	score += 1

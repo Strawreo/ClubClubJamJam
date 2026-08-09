@@ -1,23 +1,16 @@
 [gd_scene format=3 uid="uid://3rctmqfy17cp"]
 
 [ext_resource type="Script" uid="uid://c8hr752f85l52" path="res://Scripts/Menu/StoreScene.gd" id="1_bxkg1"]
-[ext_resource type="Texture2D" uid="uid://cf0avxivjlcyt" path="res://Assets/Sprites/ShellIsolated.png" id="1_e8rn3"]
+[ext_resource type="Texture2D" uid="uid://cf0avxivjlcyt" path="res://Assets/Sprites/Interactables/ShellIsolated.png" id="1_e8rn3"]
 [ext_resource type="Script" uid="uid://cvhd0fy361txf" path="res://Scripts/Menu/shell_quantity.gd" id="3_mqcp6"]
-[ext_resource type="Texture2D" uid="uid://cfhxgkuno76lu" path="res://Assets/Sprites/SoftShellIsolated.png" id="3_rkdmx"]
-[ext_resource type="Texture2D" uid="uid://cey0io6jk2w4e" path="res://Assets/Sprites/CapIsolated.png" id="3_v5e4n"]
-[ext_resource type="Texture2D" uid="uid://dngb1yhkytyxa" path="res://Assets/Sprites/ConeIsolated.png" id="4_v5e4n"]
+[ext_resource type="Texture2D" uid="uid://cfhxgkuno76lu" path="res://Assets/Sprites/Shells/SoftShellIsolated.png" id="3_rkdmx"]
+[ext_resource type="Texture2D" uid="uid://cey0io6jk2w4e" path="res://Assets/Sprites/Shells/CapIsolated.png" id="3_v5e4n"]
+[ext_resource type="Texture2D" uid="uid://dngb1yhkytyxa" path="res://Assets/Sprites/Shells/ConeIsolated.png" id="4_v5e4n"]
 
-[node name="StoreScene" type="Control" unique_id=251488808]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="StoreScene" type="CanvasLayer" unique_id=37286276]
 script = ExtResource("1_bxkg1")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1029870092]
-layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -32,14 +25,15 @@ expand_mode = 2
 
 [node name="ShellQuantity" type="Label" parent="HBoxContainer" unique_id=1808126726]
 layout_mode = 2
+theme_override_font_sizes/font_size = 34
 script = ExtResource("3_mqcp6")
 
 [node name="Play" type="Button" parent="HBoxContainer" unique_id=1050159910 groups=["Button"]]
 layout_mode = 2
+theme_override_font_sizes/font_size = 34
 text = "Back"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1790059305]
-layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 495.0
@@ -49,13 +43,19 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="Cap" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1865787654 groups=["Button"]]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 icon = ExtResource("3_v5e4n")
+expand_icon = true
 
 [node name="Soft" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=646428981 groups=["Button"]]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 icon = ExtResource("3_rkdmx")
+expand_icon = true
 
 [node name="Cone" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1473440791 groups=["Button"]]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 icon = ExtResource("4_v5e4n")
+expand_icon = true

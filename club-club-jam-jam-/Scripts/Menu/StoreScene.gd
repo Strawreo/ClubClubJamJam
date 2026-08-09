@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 func _ready() -> void:
 	for button in get_tree().get_nodes_in_group("Button"):
