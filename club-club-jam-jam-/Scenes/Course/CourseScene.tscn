@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://nqb4h1whuky6"]
 
 [ext_resource type="Texture2D" uid="uid://cvg28q7i5tok2" path="res://Assets/TestSand.png" id="1_l7niq"]
+[ext_resource type="PackedScene" uid="uid://dki5unkc2xda8" path="res://Scenes/Course/Enemies/Nautilus.tscn" id="3_jd8ux"]
 [ext_resource type="PackedScene" uid="uid://byvtansre74xt" path="res://Scenes/Course/CourseCrab.tscn" id="3_q586g"]
-[ext_resource type="PackedScene" uid="uid://ddep7phgo77rl" path="res://Scenes/Course/Enemies/Seahorse.tscn" id="4_q586g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dc7il"]
 texture = ExtResource("1_l7niq")
@@ -29,5 +29,5 @@ limit_left = 0
 limit_top = -320
 limit_bottom = 640
 
-[node name="SeaHorse" parent="." unique_id=1895880688 instance=ExtResource("4_q586g")]
-position = Vector2(241, 191)
+[node name="Nautilus" parent="." unique_id=1159867322 instance=ExtResource("3_jd8ux")]
+position = Vector2(130, 191)

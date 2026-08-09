@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ddep7phgo77rl"]
 
 [ext_resource type="Texture2D" uid="uid://b5u8txwxqti6j" path="res://Assets/icon.svg" id="1_c0kvm"]
-[ext_resource type="Script" uid="uid://cfiv6h6wkwynt" path="res://Scenes/Course/Enemies/Seahorse.cs" id="1_oaxjk"]
+[ext_resource type="Script" uid="uid://cfiv6h6wkwynt" path="res://Scripts/Course/Seahorse.cs" id="1_oaxjk"]
 [ext_resource type="PackedScene" uid="uid://cwijuuyhxlxhp" path="res://Scenes/Course/Enemies/BubbleShot.tscn" id="2_7up2n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uck13"]

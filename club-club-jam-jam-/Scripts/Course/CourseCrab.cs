@@ -7,7 +7,7 @@ public partial class CourseCrab : CharacterBody2D
 	private int CrabVelocity;
 	private int Integrity;
 	private int Reaction;
-	private double StunTimer;
+	private float StunTimer;
 	private float Speed = 50.0f;
 	private Random random = new Random();
 	private int Defense
@@ -26,6 +26,7 @@ public partial class CourseCrab : CharacterBody2D
 	
 	
 	[Export] Area2D HitArea;
+	[Export] private AnimatedSprite2D animation;
 	
 	[Signal] public delegate void CrabDefeatedEventHandler();
 	
@@ -53,15 +54,18 @@ public partial class CourseCrab : CharacterBody2D
 			velocity += GetGravity() * (float)delta;
 		}
 		if(StunTimer > 0){
-			StunTimer -= delta;
+			velocity = Vector2.Zero;
+			StunTimer -= (float)delta;
 		}
 		
 		if(StunTimer <= 0 ){
+			animation.Animation = "default";
 			velocity.X = CrabVelocity * Speed;
 	
 		}
 
-		Velocity = velocity * CrabVelocity;
+		animation.Play();
+		Velocity = velocity;
 		MoveAndSlide();
 	}
 
@@ -72,6 +76,10 @@ public partial class CourseCrab : CharacterBody2D
 			}
 			else if(!Dodge()){
 				
+				if(area.Name == "NautilusHitArea"){
+					GD.Print("AAAAA");
+					StunTimer = 1.5f - (0.05f * Integrity);
+				}
 			}
 			else{
 				//Colocar animação de desvio

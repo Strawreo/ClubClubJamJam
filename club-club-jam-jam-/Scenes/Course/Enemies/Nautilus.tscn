@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dki5unkc2xda8"]
+
+[ext_resource type="Texture2D" uid="uid://b5u8txwxqti6j" path="res://Assets/icon.svg" id="1_41okt"]
+[ext_resource type="Script" uid="uid://bx1wsbv01w8i4" path="res://Scenes/Course/Enemies/Nautilus.cs" id="1_hea7y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ev4kj"]
+size = Vector2(22, 22)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ev4kj"]
+radius = 100.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tl5bo"]
+size = Vector2(24, 25)
+
+[node name="Nautilus" type="CharacterBody2D" unique_id=1159867322 node_paths=PackedStringArray("DetectArea", "HitArea")]
+collision_layer = 2
+collision_mask = 5
+motion_mode = 1
+script = ExtResource("1_hea7y")
+DetectArea = NodePath("DetectArea")
+HitArea = NodePath("NautilusHitArea")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=422746389]
+scale = Vector2(0.1875, 0.19921875)
+texture = ExtResource("1_41okt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=983499211]
+shape = SubResource("RectangleShape2D_ev4kj")
+
+[node name="DetectArea" type="Area2D" parent="." unique_id=1003283780]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea" unique_id=29240022]
+shape = SubResource("CircleShape2D_ev4kj")
+
+[node name="NautilusHitArea" type="Area2D" parent="." unique_id=1706328132 groups=["Enemies"]]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NautilusHitArea" unique_id=1379775886]
+shape = SubResource("RectangleShape2D_tl5bo")
