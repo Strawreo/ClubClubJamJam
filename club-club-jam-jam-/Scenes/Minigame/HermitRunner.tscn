@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dcau76olyjgc1" path="res://Scripts/Minigame/hermit_runner.gd" id="1_a07ty"]
 [ext_resource type="Texture2D" uid="uid://dpiydydhn4v2u" path="res://Assets/Animations/Hermit-Sheet.png" id="2_pnjmh"]
+[ext_resource type="Script" uid="uid://ev5q6xrve5ww" path="res://Scripts/Minigame/sprite_2d.gd" id="3_2h51k"]
+[ext_resource type="Texture2D" uid="uid://cey0io6jk2w4e" path="res://Assets/Sprites/Shells/CapIsolated.png" id="3_71h03"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2h51k"]
 atlas = ExtResource("2_pnjmh")
@@ -51,6 +53,12 @@ sprite_frames = SubResource("SpriteFrames_f6wxy")
 autoplay = "default"
 frame = 2
 frame_progress = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=261337977]
+show_behind_parent = true
+position = Vector2(-2, -3)
+texture = ExtResource("3_71h03")
+script = ExtResource("3_2h51k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=865357144]
 shape = SubResource("CircleShape2D_10siy")
