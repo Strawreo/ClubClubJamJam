@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ddep7phgo77rl"]
+
+[ext_resource type="Texture2D" uid="uid://b5u8txwxqti6j" path="res://Assets/icon.svg" id="1_c0kvm"]
+[ext_resource type="Script" uid="uid://cfiv6h6wkwynt" path="res://Scenes/Course/Enemies/Seahorse.cs" id="1_oaxjk"]
+[ext_resource type="PackedScene" uid="uid://cwijuuyhxlxhp" path="res://Scenes/Course/Enemies/BubbleShot.tscn" id="2_7up2n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uck13"]
+size = Vector2(15, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ev4kj"]
+radius = 89.050545
+
+[node name="SeaHorse" type="CharacterBody2D" unique_id=1895880688 node_paths=PackedStringArray("detectArea")]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_oaxjk")
+detectArea = NodePath("DetectArea")
+BubbleShot = ExtResource("2_7up2n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=856641765]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_uck13")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=312020792]
+position = Vector2(0.99999976, 0)
+scale = Vector2(0.12109378, 0.11718753)
+texture = ExtResource("1_c0kvm")
+
+[node name="DetectArea" type="Area2D" parent="." unique_id=335438679]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea" unique_id=598538155]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_ev4kj")
