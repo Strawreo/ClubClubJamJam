@@ -45,6 +45,7 @@ func lose_life():
 		game_over.attribute = "Reaction"
 		game_over.score = score
 		get_parent().add_child(game_over)
+		get_tree().paused = true
 		queue_free()
 
 func _on_push_timer_timeout() -> void:

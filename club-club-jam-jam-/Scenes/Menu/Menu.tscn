@@ -1,27 +1,56 @@
 [gd_scene format=3 uid="uid://c8hh7yg6pjvk0"]
 
 [ext_resource type="Script" uid="uid://cmw1qkdxut4b0" path="res://Scripts/Menu/menu.gd" id="1_3kf3n"]
+[ext_resource type="Texture2D" uid="uid://cngrdpprkooa2" path="res://Assets/Sprites/Misc/Title.png" id="2_3kh17"]
+[ext_resource type="Texture2D" uid="uid://bhp6ghd05bnvq" path="res://Assets/Sprites/Backgrounds/OceanBackground-PlainColour.png" id="2_l7xyq"]
+[ext_resource type="Texture2D" uid="uid://75d2bg4wmjtm" path="res://Assets/Sprites/Backgrounds/OceanBackground-ThirdSand.png" id="3_h7084"]
+[ext_resource type="Texture2D" uid="uid://dh27cymjh4tst" path="res://Assets/Sprites/Backgrounds/OceanBackground-SecondSand.png" id="4_uw0ty"]
+[ext_resource type="Texture2D" uid="uid://c2f01oclyp6n4" path="res://Assets/Sprites/Backgrounds/OceanBackground-FirstSand.png" id="5_ac4b6"]
 
-[node name="Control" type="Control" unique_id=302165348]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Control" type="CanvasLayer" unique_id=1451047976]
 script = ExtResource("1_3kf3n")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1250807621]
-layout_mode = 1
+[node name="PlainColour" type="TextureRect" parent="." unique_id=1530197816]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.32411522, 0.6652055, 0.6706541, 1)
+texture = ExtResource("2_l7xyq")
+
+[node name="ThirdSand" type="TextureRect" parent="." unique_id=1111420982]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_h7084")
+
+[node name="SecondSand" type="TextureRect" parent="." unique_id=1574302963]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_uw0ty")
+
+[node name="FirstSand" type="TextureRect" parent="." unique_id=351631058]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_ac4b6")
+
+[node name="WaterTop" type="TextureRect" parent="." unique_id=2093196298]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_ac4b6")
 
 [node name="EquipeNome" type="HBoxContainer" parent="." unique_id=456260761]
-layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -40,7 +69,6 @@ size_flags_horizontal = 4
 text = "PlaceHolder "
 
 [node name="MainMenu" type="VBoxContainer" parent="." unique_id=867378382]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -54,32 +82,35 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="NomeDoJogo" type="Label" parent="MainMenu" unique_id=852933093]
-custom_minimum_size = Vector2(650, 0)
+[node name="Panel" type="Panel" parent="MainMenu" unique_id=2043194153]
+modulate = Color(1, 1, 1, 0)
+custom_maximum_size = Vector2(640, 100)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="MainMenu" unique_id=877919035]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 48
-text = "Nome do Jogo "
-horizontal_alignment = 1
+size_flags_vertical = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu" unique_id=928132634]
+[node name="Sprite2D" type="Sprite2D" parent="MainMenu/Control" unique_id=2102461753]
+position = Vector2(8.5, -39)
+scale = Vector2(2, 2)
+texture = ExtResource("2_3kh17")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu" unique_id=890803690]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 8
-alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/HBoxContainer" unique_id=890803690]
-layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Play" type="Button" parent="MainMenu/HBoxContainer/VBoxContainer" unique_id=1063857656 groups=["Button"]]
+[node name="Play" type="Button" parent="MainMenu/VBoxContainer" unique_id=1063857656 groups=["Button"]]
 layout_mode = 2
 text = "Play"
 
-[node name="Credits" type="Button" parent="MainMenu/HBoxContainer/VBoxContainer" unique_id=2114428408 groups=["Button"]]
+[node name="Credits" type="Button" parent="MainMenu/VBoxContainer" unique_id=2114428408 groups=["Button"]]
 layout_mode = 2
 text = "Credits"
 
-[node name="Quit" type="Button" parent="MainMenu/HBoxContainer/VBoxContainer" unique_id=1744676064 groups=["Button"]]
+[node name="Quit" type="Button" parent="MainMenu/VBoxContainer" unique_id=1744676064 groups=["Button"]]
 layout_mode = 2
 text = "Quit "

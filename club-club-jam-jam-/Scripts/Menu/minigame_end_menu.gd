@@ -28,8 +28,10 @@ func _ready() -> void:
 func on_button_pressed(button: Button) -> void:
 	match button.name:
 		"Play": 
+			get_tree().paused = false
 			var _game: bool = get_tree().change_scene_to_file("res://Scenes/Menu/Main.tscn")
 		"Retry":
+			get_tree().paused = false
 			var _retry: bool = get_tree().change_scene_to_file(direction)
 
 func mouse_interaction(button: Button, state: String) -> void:

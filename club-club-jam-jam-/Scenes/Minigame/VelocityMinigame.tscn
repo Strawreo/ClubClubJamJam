@@ -1,24 +1,35 @@
 [gd_scene format=4 uid="uid://dtljdt1dtfxcd"]
 
 [ext_resource type="PackedScene" uid="uid://4vd3agalfqfo" path="res://Scenes/Minigame/HermitRunner.tscn" id="1_3m2c0"]
-[ext_resource type="Texture2D" uid="uid://cvg28q7i5tok2" path="res://Assets/TestSand.png" id="1_b2g32"]
 [ext_resource type="Script" uid="uid://b7yhffwq5ne3h" path="res://Scripts/Minigame/velocity_minigame.gd" id="1_c80nj"]
+[ext_resource type="Texture2D" uid="uid://bhp6ghd05bnvq" path="res://Assets/Sprites/Backgrounds/OceanBackground-PlainColour.png" id="2_323ov"]
+[ext_resource type="Texture2D" uid="uid://b7g7i0eb1tkhw" path="res://Assets/Sprites/Backgrounds/SandTop.png" id="2_bdmvq"]
+[ext_resource type="Texture2D" uid="uid://pgkd5l42s1cb" path="res://Assets/Sprites/Tiles/SandTile.png" id="2_c80nj"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c80nj"]
-texture = ExtResource("1_b2g32")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bdmvq"]
+texture = ExtResource("2_c80nj")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_b2g32"]
+[sub_resource type="TileSet" id="TileSet_kxiwc"]
 physics_layer_0/collision_layer = 4
-sources/0 = SubResource("TileSetAtlasSource_c80nj")
+sources/0 = SubResource("TileSetAtlasSource_bdmvq")
 
 [node name="VelocityMinigame" type="Node2D" unique_id=77807642]
+process_mode = 1
 script = ExtResource("1_c80nj")
+
+[node name="OceanBackgroundPlainColour" type="Sprite2D" parent="." unique_id=442978249]
+position = Vector2(0, -1)
+texture = ExtResource("2_323ov")
+
+[node name="SandTop" type="Sprite2D" parent="." unique_id=1211627441]
+position = Vector2(0, 24)
+texture = ExtResource("2_bdmvq")
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=2128152678]
 tile_map_data = PackedByteArray("AAD2/wIAAAAAAAAAAAD3/wIAAAAAAAAAAAD4/wIAAAAAAAAAAAD5/wIAAAAAAAAAAAD6/wIAAAAAAAAAAAD7/wIAAAAAAAAAAAD8/wIAAAAAAAAAAAD9/wIAAAAAAAAAAAD+/wIAAAAAAAAAAAD//wIAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAHAAIAAAAAAAAAAAAIAAIAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAMAAAAAAAAAAAAIAAMAAAAAAAAAAAAHAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAD2/wMAAAAAAAAAAAD2/wQAAAAAAAAAAAD2/wUAAAAAAAAAAAD3/wMAAAAAAAAAAAD3/wQAAAAAAAAAAAD3/wUAAAAAAAAAAAD4/wMAAAAAAAAAAAD4/wQAAAAAAAAAAAD4/wUAAAAAAAAAAAD5/wMAAAAAAAAAAAD5/wQAAAAAAAAAAAD5/wUAAAAAAAAAAAD6/wMAAAAAAAAAAAD6/wQAAAAAAAAAAAD6/wUAAAAAAAAAAAD7/wMAAAAAAAAAAAD7/wQAAAAAAAAAAAD7/wUAAAAAAAAAAAD8/wMAAAAAAAAAAAD8/wQAAAAAAAAAAAD8/wUAAAAAAAAAAAD9/wMAAAAAAAAAAAD9/wQAAAAAAAAAAAD9/wUAAAAAAAAAAAD+/wMAAAAAAAAAAAD+/wQAAAAAAAAAAAD+/wUAAAAAAAAAAAD//wMAAAAAAAAAAAD//wQAAAAAAAAAAAD//wUAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAMAAAAAAAAAAAD1////AAAAAAAAAAD1/wAAAAAAAAAAAAD1/wEAAAAAAAAAAAD1/wIAAAAAAAAAAAD1/wMAAAAAAAAAAAD1/wQAAAAAAAAAAAD1//v/AAAAAAAAAAD1//z/AAAAAAAAAAD1//3/AAAAAAAAAAD1//7/AAAAAAAAAAD1/wUAAAAAAAAAAAAKAPr/AAAAAAAAAAAKAPv/AAAAAAAAAAAKAPz/AAAAAAAAAAAKAP3/AAAAAAAAAAAKAP7/AAAAAAAAAAAKAP//AAAAAAAAAAAKAAAAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAD1//r/AAAAAAAAAAA=")
-tile_set = SubResource("TileSet_b2g32")
+tile_set = SubResource("TileSet_kxiwc")
 metadata/_edit_lock_ = true
 
 [node name="HermitRunner" parent="." unique_id=907520693 instance=ExtResource("1_3m2c0")]

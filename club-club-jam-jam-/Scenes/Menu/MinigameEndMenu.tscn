@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://yds7hjdtebjd" path="res://Scripts/Menu/minigame_end_menu.gd" id="1_e7ien"]
 
 [node name="MinigameEndMenu" type="CanvasLayer" unique_id=2109208397]
+process_mode = 3
 script = ExtResource("1_e7ien")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1764014535]

@@ -31,6 +31,7 @@ func _on_death_area_area_entered(area: Area2D) -> void:
 	game_over.attribute = "Velocity"
 	game_over.score = score
 	get_parent().add_child(game_over)
+	get_tree().paused = true
 	queue_free()
 
 

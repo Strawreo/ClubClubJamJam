@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bwt4e01n7pk5i"]
 
 [ext_resource type="Script" uid="uid://cf0twuq7d075p" path="res://Scripts/Menu/control.gd" id="1_dpr4o"]
+[ext_resource type="Texture2D" uid="uid://bhp6ghd05bnvq" path="res://Assets/Sprites/Backgrounds/OceanBackground-PlainColour.png" id="2_wg0mu"]
 
 [node name="Main" type="Node2D" unique_id=2073079257]
 
@@ -10,6 +11,15 @@ anchors_preset = 0
 offset_right = 640.0
 offset_bottom = 360.0
 script = ExtResource("1_dpr4o")
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1152852768]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wg0mu")
 
 [node name="Minigames" type="HBoxContainer" parent="Control" unique_id=1801134013]
 layout_mode = 1
@@ -54,17 +64,20 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_constants/separation = 20
 
+[node name="Velocity" type="Label" parent="Control/Attributes/VBoxContainer" unique_id=1062364374]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Velocity"
+
 [node name="Integrity" type="Label" parent="Control/Attributes/VBoxContainer" unique_id=64225268]
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "Integrity"
 
 [node name="Reaction" type="Label" parent="Control/Attributes/VBoxContainer" unique_id=1036018255]
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "Reaction"
-
-[node name="Velocity" type="Label" parent="Control/Attributes/VBoxContainer" unique_id=1062364374]
-layout_mode = 2
-text = "Velocity"
 
 [node name="Store" type="HBoxContainer" parent="Control" unique_id=2141384522]
 layout_mode = 1
