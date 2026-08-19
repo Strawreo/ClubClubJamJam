@@ -1,5 +1,5 @@
 extends Control
-
+const MINIGAME_COST: int = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,11 +21,11 @@ func _process(delta: float) -> void:
 func on_button_pressed(button: Button) -> void:
 	match button.name:
 		"VelocityMinigame":
-			get_tree().change_scene_to_file("res://Scenes/Minigame/VelocityMinigame.tscn")
+			_try_start_minigame("res://Scenes/Minigame/VelocityMinigame.tscn", MINIGAME_COST)
 		"IntegrityMinigame":
-			get_tree().change_scene_to_file("res://Scenes/Minigame/IntegrityMinigame.tscn")
+			_try_start_minigame("res://Scenes/Minigame/IntegrityMinigame.tscn", MINIGAME_COST)
 		"ReactionMinigame":
-			get_tree().change_scene_to_file("res://Scenes/Minigame/ReactionMinigame.tscn")
+			_try_start_minigame("res://Scenes/Minigame/ReactionMinigame.tscn", MINIGAME_COST)
 		"StoreButton":
 			get_tree().change_scene_to_file("res://Scenes/Menu/StoreScene.tscn")
 		"PlayButton":
@@ -34,3 +34,9 @@ func on_button_pressed(button: Button) -> void:
 
 func mouse_interaction(button: Button, state: String) -> void:
 	pass
+func _try_start_minigame(scene_path: String,cost:int) -> void:
+	if Global.quantity_shells>=cost:
+		Global.quantity_shells-=cost
+		Global.save_game()
+	else:
+		print("Fragmentos insuficientes! Custo fixo: ", cost, " | Saldo atual: ", Global.quantity_shells)
