@@ -6,9 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://cfhxgkuno76lu" path="res://Assets/Sprites/Shells/SoftShellIsolated.png" id="3_rkdmx"]
 [ext_resource type="Texture2D" uid="uid://cey0io6jk2w4e" path="res://Assets/Sprites/Shells/CapIsolated.png" id="3_v5e4n"]
 [ext_resource type="Texture2D" uid="uid://dngb1yhkytyxa" path="res://Assets/Sprites/Shells/ConeIsolated.png" id="4_v5e4n"]
+[ext_resource type="Texture2D" uid="uid://x5l1jqr7sk0f" path="res://Assets/Sprites/ShellIsolated.png" id="7_mqcp6"]
 
-[node name="StoreScene" type="CanvasLayer" unique_id=37286276]
+[node name="StoreScene" type="CanvasLayer" unique_id=37286276 node_paths=PackedStringArray("CapLabel", "SoftLabel", "ConeLabel", "SoftTexture", "ConeTexture")]
 script = ExtResource("1_bxkg1")
+CapLabel = NodePath("VBoxContainer/HBoxContainer/CapLabel")
+SoftLabel = NodePath("VBoxContainer/HBoxContainer2/SoftLabel")
+ConeLabel = NodePath("VBoxContainer/HBoxContainer3/ConeLabel")
+SoftTexture = NodePath("VBoxContainer/HBoxContainer2/TextureRect")
+ConeTexture = NodePath("VBoxContainer/HBoxContainer3/TextureRect")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1029870092]
 anchors_preset = 1
@@ -59,3 +65,49 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 icon = ExtResource("4_v5e4n")
 expand_icon = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=892884540]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 103.0
+offset_top = 3.0
+offset_right = 140.0
+offset_bottom = 24.0
+grow_vertical = 2
+theme_override_constants/separation = 90
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=148087397]
+layout_mode = 2
+
+[node name="CapLabel" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=193948360]
+layout_mode = 2
+text = "1x"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=753060615]
+layout_mode = 2
+
+[node name="SoftLabel" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=559074052]
+layout_mode = 2
+text = "2x"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer2" unique_id=1815239359]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -2)
+offset_transform_scale = Vector2(2, 2)
+texture = ExtResource("7_mqcp6")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=1539135434]
+layout_mode = 2
+
+[node name="ConeLabel" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=1078597807]
+layout_mode = 2
+text = "3x"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer3" unique_id=1454102687]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -2)
+offset_transform_scale = Vector2(2, 2)
+texture = ExtResource("7_mqcp6")

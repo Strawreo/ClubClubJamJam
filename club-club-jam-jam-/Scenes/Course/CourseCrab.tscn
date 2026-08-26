@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dnvoifpuaf1ye" path="res://Scripts/Course/CourseCrab.cs" id="1_1a2j1"]
 [ext_resource type="Texture2D" uid="uid://dpiydydhn4v2u" path="res://Assets/Animations/Hermit-Sheet.png" id="2_1a2j1"]
+[ext_resource type="Texture2D" uid="uid://cey0io6jk2w4e" path="res://Assets/Sprites/Shells/CapIsolated.png" id="3_gky5u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gky5u"]
 atlas = ExtResource("2_1a2j1")
@@ -44,12 +45,14 @@ script = ExtResource("1_1a2j1")
 HitArea = NodePath("HitArea")
 animation = NodePath("AnimatedSprite2D")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=681645391]
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=364192214]
 sprite_frames = SubResource("SpriteFrames_ev4kj")
 frame = 1
 frame_progress = 0.82335305
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D" unique_id=681645391]
+show_behind_parent = true
+texture = ExtResource("3_gky5u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1942107122]
 visible = false

@@ -56,15 +56,16 @@ public partial class CourseCrab : CharacterBody2D
 		if(StunTimer > 0){
 			velocity = Vector2.Zero;
 			StunTimer -= (float)delta;
+			animation.Stop();
 		}
 		
 		if(StunTimer <= 0 ){
 			animation.Animation = "default";
 			velocity.X = CrabVelocity * Speed;
-	
+			animation.Play();
 		}
 
-		animation.Play();
+		
 		Velocity = velocity;
 		MoveAndSlide();
 	}
@@ -77,7 +78,7 @@ public partial class CourseCrab : CharacterBody2D
 			else if(!Dodge()){
 				
 				if(area.Name == "NautilusHitArea"){
-					GD.Print("AAAAA");
+					
 					StunTimer = 1.5f - (0.05f * Integrity);
 				}
 			}
@@ -88,10 +89,12 @@ public partial class CourseCrab : CharacterBody2D
 		}
 	}
 	
-	private void Death(){
+	private async void Death(){
 		EmitSignal(SignalName.CrabDefeated);
 		SetPhysicsProcess(false);
 		GetNode<CollisionShape2D>("HitArea/CollisionShape2D").SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
+		await ToSignal(GetTree().CreateTimer(2.0f), SceneTreeTimer.SignalName.Timeout);
+		GetTree().ChangeSceneToFile("res://Scenes/Menu/Main.tscn");
 	}
 	
 	private bool Dodge(){

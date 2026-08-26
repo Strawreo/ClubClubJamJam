@@ -3,7 +3,7 @@ extends Node
 var retry_scene_path = ""
 
 var player_shell:String = "Cap"
-var quantity_shells:int = 0
+var quantity_shells:int = 20
 var shells_got:Array = ["Cap"]
 
 var defense = 1

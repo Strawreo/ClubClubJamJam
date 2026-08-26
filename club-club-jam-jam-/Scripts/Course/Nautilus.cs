@@ -31,6 +31,7 @@ public partial class Nautilus : CharacterBody2D
 		Vector2 velocity = Velocity;
 		direction = GlobalPosition.DirectionTo(hermit.GlobalPosition);
 		
+		
 		if(KnockbackTimer >= 1.0){
 			velocity = -direction * KnockbackSpeed;
 			KnockbackTimer -= (float)delta;
@@ -38,6 +39,7 @@ public partial class Nautilus : CharacterBody2D
 			velocity = velocity.MoveToward(Vector2.Zero, 1000f * (float)delta);
 		}
 		else{
+			LookAt(hermit.GlobalPosition);
 			velocity = Vector2.Zero;
 			KnockbackTimer -= (float)delta;
 		}
@@ -47,7 +49,6 @@ public partial class Nautilus : CharacterBody2D
 			
 		}
 
-	
 		Velocity = velocity;
 		MoveAndSlide();
 	}
